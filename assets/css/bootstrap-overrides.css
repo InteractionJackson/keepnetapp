@@ -1,0 +1,200 @@
+/* Bootstrap Overrides - Applied after Bootstrap loads */
+
+/* Body and base styles */
+body {
+  background-color: var(--kn-bg-dark) !important;
+  color: var(--kn-text-primary) !important;
+  font-family: var(--kn-font-base) !important;
+  line-height: var(--kn-line-height-normal);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: var(--kn-font-heading) !important;
+  font-weight: var(--kn-font-weight-bold);
+  color: var(--kn-text-primary) !important;
+}
+
+/* Lead text */
+.lead {
+  color: var(--kn-text-secondary) !important;
+  line-height: var(--kn-line-height-relaxed);
+}
+
+/* Links */
+a {
+  color: var(--kn-color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--kn-color-accent);
+  text-decoration: underline;
+}
+
+/* Buttons */
+.btn-primary {
+  background-color: var(--kn-color-accent) !important;
+  border-color: var(--kn-color-accent) !important;
+  color: white !important;
+  font-weight: var(--kn-font-weight-semibold);
+  border-radius: var(--kn-radius-lg);
+  padding: 0.75rem 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--kn-shadow-glow);
+}
+
+.btn-outline-primary {
+  border-color: var(--kn-color-accent) !important;
+  color: var(--kn-color-accent) !important;
+  border-radius: var(--kn-radius-lg);
+  font-weight: var(--kn-font-weight-semibold);
+}
+
+.btn-outline-primary:hover {
+  background-color: var(--kn-color-accent) !important;
+  color: white !important;
+}
+
+/* Cards */
+.card {
+  background-color: var(--kn-bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--kn-radius-xl) !important;
+  color: var(--kn-text-primary) !important;
+}
+
+.card-body {
+  color: var(--kn-text-primary) !important;
+}
+
+/* Forms */
+.form-control,
+.form-select {
+  background-color: var(--kn-bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: var(--kn-radius-md) !important;
+  color: var(--kn-text-primary) !important;
+  padding: 0.75rem 1rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+  background-color: var(--kn-bg-card) !important;
+  border-color: var(--kn-color-accent) !important;
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25) !important;
+  color: var(--kn-text-primary) !important;
+}
+
+.form-control::placeholder {
+  color: var(--kn-text-muted);
+}
+
+.form-label {
+  color: var(--kn-text-secondary) !important;
+  font-weight: var(--kn-font-weight-medium);
+  margin-bottom: 0.5rem;
+}
+
+/* Accordion */
+.accordion-item {
+  background-color: var(--kn-bg-card) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08) !important;
+  border-radius: var(--kn-radius-lg) !important;
+  margin-bottom: 1rem;
+}
+
+.accordion-button {
+  background-color: var(--kn-bg-card) !important;
+  color: var(--kn-text-primary) !important;
+  font-weight: var(--kn-font-weight-semibold);
+  border-radius: var(--kn-radius-lg) !important;
+  padding: 1.25rem 1.5rem;
+}
+
+.accordion-button:not(.collapsed) {
+  background-color: var(--kn-bg-card) !important;
+  color: var(--kn-color-accent) !important;
+  box-shadow: none !important;
+}
+
+.accordion-button:focus {
+  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25) !important;
+  border-color: var(--kn-color-accent) !important;
+}
+
+.accordion-button::after {
+  filter: brightness(0) invert(1);
+}
+
+.accordion-button:not(.collapsed)::after {
+  filter: brightness(0) invert(1);
+}
+
+.accordion-body {
+  background-color: var(--kn-bg-card) !important;
+  color: var(--kn-text-secondary) !important;
+  padding: 1.5rem;
+  border-bottom-left-radius: var(--kn-radius-lg) !important;
+  border-bottom-right-radius: var(--kn-radius-lg) !important;
+}
+
+/* Badge */
+.badge {
+  border-radius: var(--kn-radius-md);
+  font-weight: var(--kn-font-weight-semibold);
+  padding: 0.5rem 1rem;
+}
+
+.badge.bg-primary {
+  background-color: var(--kn-color-accent) !important;
+}
+
+/* Navbar */
+.navbar-dark .navbar-nav .nav-link {
+  color: var(--kn-text-secondary) !important;
+  font-weight: var(--kn-font-weight-medium);
+  transition: color 0.3s ease;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+  color: var(--kn-text-primary) !important;
+}
+
+.navbar-dark .navbar-brand {
+  color: var(--kn-text-primary) !important;
+  font-weight: var(--kn-font-weight-bold);
+  font-size: var(--kn-font-size-xl);
+}
+
+/* Text utilities */
+.text-muted {
+  color: var(--kn-text-muted) !important;
+}
+
+.text-accent {
+  color: var(--kn-color-accent) !important;
+}
+
+/* Background utilities */
+.bg-dark {
+  background-color: var(--kn-bg-dark) !important;
+}
+
+.bg-darker {
+  background-color: var(--kn-bg-darker) !important;
+}
+
+.bg-card {
+  background-color: var(--kn-bg-card) !important;
+}
+
+.bg-section {
+  background-color: var(--kn-bg-section) !important;
+}
+
