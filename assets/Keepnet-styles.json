@@ -1,0 +1,433 @@
+{
+  "styles": {
+    "colors": [
+      {
+        "name": "Flowkit/Purple",
+        "token": "flowkit-purple",
+        "type": "solid"
+      },
+      {
+        "name": "Flowkit/Charcoal",
+        "token": "flowkit-charcoal",
+        "type": "solid"
+      },
+      {
+        "name": "Flowkit/Red",
+        "token": "flowkit-red",
+        "type": "solid"
+      },
+      {
+        "name": "Flowkit/Green",
+        "token": "flowkit-green",
+        "type": "solid"
+      },
+      {
+        "name": "Flowkit/Blue",
+        "token": "flowkit-blue",
+        "type": "solid"
+      },
+      {
+        "name": "Flowkit/White",
+        "token": "flowkit-white",
+        "type": "solid"
+      }
+    ],
+    "textStyles": [
+      {
+        "name": "XL Title",
+        "token": "xl-title",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "900",
+        "fontSize": "56px",
+        "lineHeight": 1,
+        "letterSpacing": "1px"
+      },
+      {
+        "name": "Body",
+        "token": "body",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "fontSize": "16px",
+        "lineHeight": 1.2999999523162842,
+        "letterSpacing": "0px"
+      },
+      {
+        "name": "Heading",
+        "token": "heading",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "900",
+        "fontSize": "20px",
+        "lineHeight": 1,
+        "letterSpacing": "0px"
+      },
+      {
+        "name": "Large title",
+        "token": "large-title",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "900",
+        "fontSize": "32px",
+        "lineHeight": 1.2000000476837158,
+        "letterSpacing": "-0.5px"
+      },
+      {
+        "name": "Subtitle",
+        "token": "subtitle",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "700",
+        "fontSize": "24px",
+        "lineHeight": 1.5,
+        "letterSpacing": "0px"
+      },
+      {
+        "name": "Button",
+        "token": "button",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "900",
+        "fontSize": "14px",
+        "lineHeight": 1.2000000476837158,
+        "letterSpacing": "1px",
+        "textTransform": "upper"
+      },
+      {
+        "name": "Body emphasised",
+        "token": "body-emphasised",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "900",
+        "fontSize": "16px",
+        "lineHeight": "22px",
+        "letterSpacing": "0px"
+      },
+      {
+        "name": "Subheading emphasised",
+        "token": "subheading-emphasised",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "900",
+        "fontSize": "14px",
+        "lineHeight": "22px",
+        "letterSpacing": "-0.5px"
+      },
+      {
+        "name": "Subheading",
+        "token": "subheading",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "500",
+        "fontSize": "14px",
+        "lineHeight": 1.2000000476837158,
+        "letterSpacing": "-0.5px"
+      },
+      {
+        "name": "Caption emphasised",
+        "token": "caption-emphasised",
+        "type": "text",
+        "fontFamily": "Inter",
+        "fontWeight": "700",
+        "fontSize": "12px",
+        "lineHeight": 1,
+        "letterSpacing": "0px"
+      }
+    ],
+    "effectStyles": [
+      {
+        "name": "Neon tile",
+        "token": "neon-tile",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #9bc200",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#9bc200"
+          }
+        ]
+      },
+      {
+        "name": "Purple tile",
+        "token": "purple-tile",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #9070ff",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#9070ff"
+          }
+        ]
+      },
+      {
+        "name": "Neutral tile",
+        "token": "neutral-tile",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #1e1e1f",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#1e1e1f"
+          }
+        ]
+      },
+      {
+        "name": "Primary button",
+        "token": "primary-button",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #9bc200",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#9bc200"
+          }
+        ]
+      },
+      {
+        "name": "Secondary button",
+        "token": "secondary-button",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #2e2f31",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#2e2f31"
+          }
+        ]
+      },
+      {
+        "name": "Disabled tile",
+        "token": "disabled-tile",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #1f1f20",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#1f1f20"
+          }
+        ]
+      },
+      {
+        "name": "Teal tile",
+        "token": "teal-tile",
+        "type": "effect",
+        "value": "box-shadow: 0px 4px 0px 0px #016b83",
+        "effects": [
+          {
+            "type": "drop-shadow",
+            "x": 0,
+            "y": 4,
+            "blur": 0,
+            "spread": 0,
+            "color": "#016b83"
+          }
+        ]
+      }
+    ],
+    "gridStyles": []
+  },
+  "collections": {
+    "Variable collection": {
+      "id": "VariableCollectionId:27:1651",
+      "modes": [
+        {
+          "id": "27:0",
+          "name": "Mode 1"
+        }
+      ],
+      "variables": {
+        "colors": [
+          {
+            "name": "Primary neon",
+            "token": "primary-neon",
+            "type": "color",
+            "value": "#ccff00"
+          },
+          {
+            "name": "Purple pastel",
+            "token": "purple-pastel",
+            "type": "color",
+            "value": "#c7b7ff"
+          },
+          {
+            "name": "Teal pastel",
+            "token": "teal-pastel",
+            "type": "color",
+            "value": "#2aa1b1"
+          },
+          {
+            "name": "Background",
+            "token": "background",
+            "type": "color",
+            "value": "#0e0e0f"
+          },
+          {
+            "name": "Background secondary",
+            "token": "background-secondary",
+            "type": "color",
+            "value": "#2a2a2b"
+          },
+          {
+            "name": "Content disabled",
+            "token": "content-disabled",
+            "type": "color",
+            "value": "#3e3e3e"
+          },
+          {
+            "name": "Dark teal pastel",
+            "token": "dark-teal-pastel",
+            "type": "color",
+            "value": "#00637a"
+          },
+          {
+            "name": "ContentOnFill",
+            "token": "contentonfill",
+            "type": "color",
+            "value": "#ffffff"
+          },
+          {
+            "name": "ContentOnLight",
+            "token": "contentonlight",
+            "type": "color",
+            "value": "#000000"
+          },
+          {
+            "name": "ContentSecondary",
+            "token": "contentsecondary",
+            "type": "color",
+            "value": "#aeb7bf"
+          },
+          {
+            "name": "FillNeutral",
+            "token": "fillneutral",
+            "type": "color",
+            "value": "#3a3b3d"
+          },
+          {
+            "name": "ContentNeon",
+            "token": "contentneon",
+            "type": "color",
+            "value": "#ccff00"
+          },
+          {
+            "name": "FillSecondary",
+            "token": "fillsecondary",
+            "type": "color",
+            "value": "#3a3b3d"
+          },
+          {
+            "name": "ContentMuted",
+            "token": "contentmuted",
+            "type": "color",
+            "value": "rgba(255, 255, 255, 0.75)"
+          },
+          {
+            "name": "FillMuted",
+            "token": "fillmuted",
+            "type": "color",
+            "value": "rgba(255, 255, 255, 0.24)"
+          },
+          {
+            "name": "Large title",
+            "token": "large-title",
+            "type": "color",
+            "value": "#ffffff"
+          },
+          {
+            "name": "DangerRed",
+            "token": "dangerred",
+            "type": "color",
+            "value": "#fc5555"
+          }
+        ],
+        "numbers": [
+          {
+            "name": "Small",
+            "token": "small",
+            "type": "float",
+            "value": 8
+          },
+          {
+            "name": "Medium",
+            "token": "medium",
+            "type": "float",
+            "value": 16
+          },
+          {
+            "name": "Large",
+            "token": "large",
+            "type": "float",
+            "value": 24
+          },
+          {
+            "name": "XL",
+            "token": "xl",
+            "type": "float",
+            "value": 32
+          },
+          {
+            "name": "XXL",
+            "token": "xxl",
+            "type": "float",
+            "value": 40
+          },
+          {
+            "name": "Zero",
+            "token": "zero",
+            "type": "float",
+            "value": 0
+          }
+        ],
+        "strings": [
+          {
+            "name": "Trail",
+            "token": "trail",
+            "type": "string",
+            "value": "92lb 3oz"
+          }
+        ],
+        "booleans": [
+          {
+            "name": "Trailing",
+            "token": "trailing",
+            "type": "boolean",
+            "value": true
+          }
+        ]
+      }
+    }
+  },
+  "metadata": {
+    "exportDate": "2025-11-27T08:55:22.760Z",
+    "figmaFileKey": "unknown",
+    "fileName": "Keepnet App",
+    "pluginVersion": "1.0.0",
+    "collectionsFound": 1,
+    "collectionsExported": 1
+  }
+}

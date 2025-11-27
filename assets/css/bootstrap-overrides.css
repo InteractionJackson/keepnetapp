@@ -5,6 +5,7 @@ body {
   background-color: var(--kn-bg-dark) !important;
   color: var(--kn-text-primary) !important;
   font-family: var(--kn-font-base) !important;
+  font-size: var(--kn-font-size-base);
   line-height: var(--kn-line-height-normal);
 }
 
@@ -12,53 +13,87 @@ body {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   font-family: var(--kn-font-heading) !important;
-  font-weight: var(--kn-font-weight-bold);
+  font-weight: var(--kn-font-weight-black);
   color: var(--kn-text-primary) !important;
+}
+
+h1, .h1 { font: var(--kn-text-xl-title); letter-spacing: var(--kn-letter-spacing-wide); }
+h2, .h2 { font: var(--kn-text-large-title); letter-spacing: var(--kn-letter-spacing-tight); }
+h3, .h3 { font: var(--kn-text-subtitle); }
+h4, .h4 { font: var(--kn-text-heading); }
+h5, .h5 { font: var(--kn-text-subheading-emphasised); letter-spacing: var(--kn-letter-spacing-tight); }
+
+/* Display headings */
+.display-1, .display-2, .display-3, .display-4 {
+  font: var(--kn-text-xl-title);
+  letter-spacing: var(--kn-letter-spacing-wide);
 }
 
 /* Lead text */
 .lead {
   color: var(--kn-text-secondary) !important;
+  font: var(--kn-text-body);
   line-height: var(--kn-line-height-relaxed);
 }
 
 /* Links */
 a {
-  color: var(--kn-color-accent);
+  color: var(--kn-color-primary-neon);
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--kn-color-accent);
-  text-decoration: underline;
+  color: var(--kn-color-primary-neon);
+  text-decoration: none;
+  opacity: 0.8;
 }
 
-/* Buttons */
-.btn-primary {
-  background-color: var(--kn-color-accent) !important;
-  border-color: var(--kn-color-accent) !important;
-  color: white !important;
-  font-weight: var(--kn-font-weight-semibold);
+/* Buttons - Using design system button style */
+.btn {
+  font: var(--kn-text-button);
+  letter-spacing: var(--kn-letter-spacing-wide);
+  text-transform: uppercase;
   border-radius: var(--kn-radius-lg);
   padding: 0.75rem 1.5rem;
-  transition: all 0.3s ease;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--kn-color-primary-neon) !important;
+  color: var(--kn-text-on-light) !important;
+  box-shadow: var(--kn-shadow-primary-button);
+  font-weight: var(--kn-font-weight-black);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: var(--kn-shadow-glow);
+  box-shadow: var(--kn-shadow-primary-button), var(--kn-shadow-glow-neon);
+  background-color: var(--kn-color-primary-neon) !important;
+}
+
+.btn-primary:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 .btn-outline-primary {
-  border-color: var(--kn-color-accent) !important;
-  color: var(--kn-color-accent) !important;
-  border-radius: var(--kn-radius-lg);
-  font-weight: var(--kn-font-weight-semibold);
+  border: 2px solid var(--kn-color-primary-neon) !important;
+  color: var(--kn-color-primary-neon) !important;
+  background: transparent !important;
+  box-shadow: var(--kn-shadow-secondary-button);
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--kn-color-accent) !important;
-  color: white !important;
+  background-color: var(--kn-color-primary-neon) !important;
+  color: var(--kn-text-on-light) !important;
+  transform: translateY(-2px);
+  box-shadow: var(--kn-shadow-secondary-button), var(--kn-shadow-glow-neon);
+}
+
+.btn-outline-primary:active {
+  transform: translateY(2px);
+  box-shadow: none;
 }
 
 /* Cards */
@@ -67,10 +102,12 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: var(--kn-radius-xl) !important;
   color: var(--kn-text-primary) !important;
+  box-shadow: var(--kn-shadow-neutral-tile);
 }
 
 .card-body {
   color: var(--kn-text-primary) !important;
+  font: var(--kn-text-body);
 }
 
 /* Forms */
@@ -81,13 +118,14 @@ a:hover {
   border-radius: var(--kn-radius-md) !important;
   color: var(--kn-text-primary) !important;
   padding: 0.75rem 1rem;
+  font: var(--kn-text-body);
 }
 
 .form-control:focus,
 .form-select:focus {
   background-color: var(--kn-bg-card) !important;
-  border-color: var(--kn-color-accent) !important;
-  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25) !important;
+  border-color: var(--kn-color-primary-neon) !important;
+  box-shadow: 0 0 0 0.2rem rgba(204, 255, 0, 0.25) !important;
   color: var(--kn-text-primary) !important;
 }
 
@@ -97,7 +135,7 @@ a:hover {
 
 .form-label {
   color: var(--kn-text-secondary) !important;
-  font-weight: var(--kn-font-weight-medium);
+  font: var(--kn-text-subheading-emphasised);
   margin-bottom: 0.5rem;
 }
 
@@ -107,25 +145,26 @@ a:hover {
   border: 1px solid rgba(255, 255, 255, 0.08) !important;
   border-radius: var(--kn-radius-lg) !important;
   margin-bottom: 1rem;
+  box-shadow: var(--kn-shadow-neutral-tile);
 }
 
 .accordion-button {
   background-color: var(--kn-bg-card) !important;
   color: var(--kn-text-primary) !important;
-  font-weight: var(--kn-font-weight-semibold);
+  font: var(--kn-text-body-emphasised);
   border-radius: var(--kn-radius-lg) !important;
   padding: 1.25rem 1.5rem;
 }
 
 .accordion-button:not(.collapsed) {
   background-color: var(--kn-bg-card) !important;
-  color: var(--kn-color-accent) !important;
+  color: var(--kn-color-primary-neon) !important;
   box-shadow: none !important;
 }
 
 .accordion-button:focus {
-  box-shadow: 0 0 0 0.2rem rgba(66, 133, 244, 0.25) !important;
-  border-color: var(--kn-color-accent) !important;
+  box-shadow: 0 0 0 0.2rem rgba(204, 255, 0, 0.25) !important;
+  border-color: var(--kn-color-primary-neon) !important;
 }
 
 .accordion-button::after {
@@ -147,12 +186,14 @@ a:hover {
 /* Badge */
 .badge {
   border-radius: var(--kn-radius-md);
-  font-weight: var(--kn-font-weight-semibold);
+  font: var(--kn-text-button);
+  letter-spacing: var(--kn-letter-spacing-wide);
   padding: 0.5rem 1rem;
 }
 
 .badge.bg-primary {
-  background-color: var(--kn-color-accent) !important;
+  background-color: var(--kn-color-primary-neon) !important;
+  color: var(--kn-text-on-light) !important;
 }
 
 /* Navbar */
@@ -178,7 +219,19 @@ a:hover {
 }
 
 .text-accent {
-  color: var(--kn-color-accent) !important;
+  color: var(--kn-color-primary-neon) !important;
+}
+
+.text-neon {
+  color: var(--kn-text-neon) !important;
+}
+
+.text-purple {
+  color: var(--kn-color-purple-pastel) !important;
+}
+
+.text-teal {
+  color: var(--kn-color-teal-pastel) !important;
 }
 
 /* Background utilities */
