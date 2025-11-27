@@ -37,28 +37,32 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="#home">Keepnet</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto align-items-lg-center">
-          <li class="nav-item">
-            <a class="nav-link" href="#features">Features</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#how-it-works">How it works</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#screenshots">Screenshots</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#faq">FAQ</a>
-          </li>
-          <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
-            <a class="btn btn-primary" href="#beta">Join the Beta</a>
-          </li>
-        </ul>
+      <div class="navbar-inner">
+        <a class="navbar-brand" href="#home">
+          <img src="/assets/images/logo.svg" alt="Keepnet Logo" height="32" class="logo-icon">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto align-items-lg-center">
+            <li class="nav-item">
+              <a class="nav-link" href="#features">Features</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#how-it-works">How it works</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#screenshots">Screenshots</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#faq">FAQ</a>
+            </li>
+            <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+              <a class="btn btn-primary" href="#beta">Join the Beta</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </div>
   </nav>
@@ -66,20 +70,20 @@
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="container">
-      <div class="row align-items-center">
-        <div class="col-lg-6 mb-5 mb-lg-0">
-          <h1 class="display-3 fw-bold mb-4">Track every bite. Master your matches.</h1>
-          <p class="lead mb-4">The simple, friendly app for UK match anglers. Log your catches live, track what works, and improve your game — one match at a time.</p>
-          <div class="d-flex flex-column flex-sm-row gap-3">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h1 class="display-3 fw-bold mb-4">Track every bite.<br>Master your matches.</h1>
+          <p class="lead mb-4 mx-auto" style="max-width: 600px;">The simple, friendly app for UK match anglers. Log your catches live, track what works, and improve your game — one match at a time.</p>
+          <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center mb-5">
             <a href="#beta" class="btn btn-primary btn-lg">Join the Beta</a>
-            <a href="#how-it-works" class="btn btn-outline-primary btn-lg">See how it works</a>
+            <a href="#how-it-works" class="btn btn-outline-primary btn-lg">How it works</a>
           </div>
         </div>
-        <div class="col-lg-6">
+      </div>
+      <div class="row">
+        <div class="col-12">
           <div class="hero-mockup text-center">
-            <div style="background: linear-gradient(135deg, rgba(66, 133, 244, 0.2), rgba(26, 115, 232, 0.2)); border-radius: 2rem; padding: 3rem; min-height: 400px; display: flex; align-items: center; justify-content: center; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);">
-              <p style="color: var(--kn-text-muted); font-size: 1.25rem;">App Mockup<br>Coming Soon</p>
-            </div>
+            <img src="/assets/images/mockups/mobile-lineup.png" alt="Keepnet app screenshots" style="max-width: 100%; height: auto; max-height: 600px; object-fit: contain;">
           </div>
         </div>
       </div>
@@ -106,29 +110,29 @@
           <p class="section-subtitle">Four powerful features designed specifically for match anglers</p>
         </div>
       </div>
-      <div class="row g-4">
-        <div class="col-12 col-md-6 col-lg-3">
+      <div class="row g-4 justify-content-center">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="feature-card text-center">
             <div class="feature-icon mx-auto">🎣</div>
             <h3 class="feature-title">Add fish as you catch them</h3>
             <p class="feature-description">During your match, log each catch instantly. See your running total and stay focused on the water.</p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="feature-card text-center">
             <div class="feature-icon mx-auto">📝</div>
             <h3 class="feature-title">Remember every session</h3>
             <p class="feature-description">Record venue, peg, date, conditions, and final weight. Build a personal database of your angling history.</p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="feature-card text-center">
             <div class="feature-icon mx-auto">🪝</div>
             <h3 class="feature-title">What actually works?</h3>
             <p class="feature-description">Log which baits, rigs, and tactics you used. Over time, see clear patterns in what brings results.</p>
           </div>
         </div>
-        <div class="col-12 col-md-6 col-lg-3">
+        <div class="col-12 col-sm-6 col-lg-3">
           <div class="feature-card text-center">
             <div class="feature-icon mx-auto">📊</div>
             <h3 class="feature-title">Get better over time</h3>

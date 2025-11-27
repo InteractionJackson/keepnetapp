@@ -198,19 +198,25 @@ a:hover {
 
 /* Navbar */
 .navbar-dark .navbar-nav .nav-link {
-  color: var(--kn-text-secondary) !important;
+  color: var(--kn-text-primary) !important;
   font-weight: var(--kn-font-weight-medium);
-  transition: color 0.3s ease;
+  transition: color 0.2s ease;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 0.5rem 1rem !important;
 }
 
 .navbar-dark .navbar-nav .nav-link:hover {
-  color: var(--kn-text-primary) !important;
+  color: var(--kn-color-primary-neon) !important;
 }
 
 .navbar-dark .navbar-brand {
   color: var(--kn-text-primary) !important;
-  font-weight: var(--kn-font-weight-bold);
-  font-size: var(--kn-font-size-xl);
+  font-weight: var(--kn-font-weight-black);
+  font-size: var(--kn-font-size-lg);
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 /* Text utilities */
