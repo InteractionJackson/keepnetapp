@@ -21,22 +21,22 @@
 @layer components {
   /* Button styles */
   .btn-primary {
-    @apply bg-kn-primary-neon text-kn-text-on-light font-medium rounded-xl px-6 py-3;
-    @apply transition-all duration-200 shadow-neon-tile;
+    @apply bg-kn-primary-neon text-kn-text-on-light font-black rounded-full px-[12px] py-[16px];
+    @apply uppercase text-[14px] transition-all duration-200 shadow-neon-tile;
     @apply hover:bg-kn-primary-muted active:translate-y-[3px] active:shadow-none;
   }
   
   .btn-secondary {
-    @apply bg-kn-bg-card text-kn-text-primary font-medium rounded-xl px-6 py-3;
-    @apply border border-white/10 transition-all duration-200 shadow-neutral-tile;
+    @apply bg-kn-bg-card text-kn-text-primary font-black rounded-full px-[18px] py-[16px];
+    @apply uppercase text-[14px] border border-white/10 transition-all duration-200 shadow-neutral-tile;
     @apply hover:border-white/20 active:translate-y-[3px] active:shadow-none;
   }
   
   .btn-compact {
-    @apply px-4 py-2 text-sm;
+    @apply px-4 py-2 text-[12px];
   }
   
   .btn-lg {
-    @apply px-8 py-4 text-lg;
+    @apply px-5 py-2 text-[14px];
   }
 }
