@@ -33,6 +33,8 @@ h5, .h5 { font: var(--kn-text-subheading-emphasised); letter-spacing: var(--kn-l
 .lead {
   color: var(--kn-text-secondary) !important;
   font: var(--kn-text-body);
+  font-weight: var(--kn-font-weight-regular);
+  letter-spacing: var(--kn-letter-spacing-slight);
   line-height: var(--kn-line-height-relaxed);
 }
 
@@ -57,8 +59,10 @@ a:hover {
   padding: 0.75rem 1.5rem;
   border: none;
   transition: all 0.2s ease;
+  position: relative;
 }
 
+/* Primary Button - Neon Yellow */
 .btn-primary {
   background-color: var(--kn-color-primary-neon) !important;
   color: var(--kn-text-on-light) !important;
@@ -67,32 +71,169 @@ a:hover {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--kn-shadow-primary-button), var(--kn-shadow-glow-neon);
-  background-color: var(--kn-color-primary-neon) !important;
+  background-color: #d1ff05 !important;
 }
 
 .btn-primary:active {
-  transform: translateY(2px);
+  transform: translateY(4px);
   box-shadow: none;
 }
 
+.btn-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: var(--kn-color-primary-neon) !important;
+}
+
+.btn-primary:disabled:hover {
+  transform: none;
+  box-shadow: var(--kn-shadow-primary-button);
+}
+
+/* Secondary Button - Fill Secondary */
+.btn-secondary {
+  background-color: var(--kn-fill-secondary) !important;
+  color: var(--kn-text-primary) !important;
+  box-shadow: var(--kn-shadow-secondary-button);
+  font-weight: var(--kn-font-weight-black);
+}
+
+.btn-secondary:hover {
+  background-color: #3f4042 !important;
+}
+
+.btn-secondary:active {
+  transform: translateY(4px);
+  box-shadow: none;
+}
+
+.btn-secondary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background-color: var(--kn-fill-secondary) !important;
+}
+
+.btn-secondary:disabled:hover {
+  transform: none;
+  box-shadow: var(--kn-shadow-secondary-button);
+}
+
+/* Tertiary Button - Text Only */
+.btn-tertiary {
+  background-color: transparent !important;
+  color: var(--kn-text-primary) !important;
+  box-shadow: none;
+  font-weight: var(--kn-font-weight-black);
+}
+
+.btn-tertiary:hover {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+.btn-tertiary:active {
+  transform: translateY(2px);
+}
+
+.btn-tertiary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.btn-tertiary:disabled:hover {
+  transform: none;
+  color: var(--kn-text-primary) !important;
+}
+
+/* Outline Primary (keeping for backward compatibility) */
 .btn-outline-primary {
   border: 2px solid var(--kn-color-primary-neon) !important;
   color: var(--kn-color-primary-neon) !important;
   background: transparent !important;
-  box-shadow: var(--kn-shadow-secondary-button);
+  box-shadow: none;
+  font-weight: var(--kn-font-weight-black);
 }
 
 .btn-outline-primary:hover {
-  background-color: var(--kn-color-primary-neon) !important;
-  color: var(--kn-text-on-light) !important;
-  transform: translateY(-2px);
-  box-shadow: var(--kn-shadow-secondary-button), var(--kn-shadow-glow-neon);
+  background-color: rgba(204, 255, 0, 0.1) !important;
+  color: var(--kn-color-primary-neon) !important;
 }
 
 .btn-outline-primary:active {
   transform: translateY(2px);
+}
+
+.btn-outline-primary:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* Compact Button Size */
+.btn-compact {
+  padding: 0.5rem 0.75rem;
+  font-size: var(--kn-font-size-xs);
+}
+
+/* Icon-only Button Variants */
+.btn-icon {
+  width: 48px;
+  height: 48px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.btn-icon-sm {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: var(--kn-font-size-lg);
+}
+
+.btn-icon-lg {
+  width: 56px;
+  height: 56px;
+  padding: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: var(--kn-font-size-xl);
+}
+
+/* Icon button shadows adjusted for circular shape */
+.btn-icon.btn-primary,
+.btn-icon-sm.btn-primary,
+.btn-icon-lg.btn-primary {
+  box-shadow: 0px 3px 0px 0px #9bc200;
+}
+
+.btn-icon.btn-primary:active,
+.btn-icon-sm.btn-primary:active,
+.btn-icon-lg.btn-primary:active {
+  transform: translateY(3px);
+}
+
+.btn-icon.btn-secondary,
+.btn-icon-sm.btn-secondary,
+.btn-icon-lg.btn-secondary {
+  box-shadow: 0px 3px 0px 0px #2e2f31;
+}
+
+.btn-icon.btn-secondary:active,
+.btn-icon-sm.btn-secondary:active,
+.btn-icon-lg.btn-secondary:active {
+  transform: translateY(3px);
+}
+
+.btn-icon.btn-tertiary,
+.btn-icon-sm.btn-tertiary,
+.btn-icon-lg.btn-tertiary {
   box-shadow: none;
 }
 
@@ -201,7 +342,7 @@ a:hover {
   color: var(--kn-text-primary) !important;
   font-weight: var(--kn-font-weight-medium);
   transition: color 0.2s ease;
-  font-size: 0.875rem;
+  font-size: var(--kn-font-size-sm);
   text-transform: uppercase;
   letter-spacing: 0.5px;
   padding: 0.5rem 1rem !important;
@@ -214,9 +355,9 @@ a:hover {
 .navbar-dark .navbar-brand {
   color: var(--kn-text-primary) !important;
   font-weight: var(--kn-font-weight-black);
-  font-size: var(--kn-font-size-lg);
+  font-size: var(--kn-font-size-xl);
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: var(--kn-letter-spacing-wide);
 }
 
 /* Text utilities */

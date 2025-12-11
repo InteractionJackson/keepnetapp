@@ -1,9 +1,22 @@
 /* Import Inter font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap');
 
-/* Design Tokens - Generated from Keepnet-styles.json */
+/* Design Tokens - Generated from Figma design system */
 :root {
-  /* Brand Colors */
+  /* ===================================
+     Flowkit Style Colors (Solid Type)
+     ===================================
+     These are style tokens from the design system:
+     - flowkit-purple
+     - flowkit-charcoal  
+     - flowkit-red
+     - flowkit-green
+     - flowkit-blue
+     - flowkit-white
+     Use the variable collection colors below for implementation.
+  */
+  
+  /* Variable Collection - Colors */
   --kn-color-primary-neon: #ccff00;
   --kn-color-purple-pastel: #c7b7ff;
   --kn-color-teal-pastel: #2aa1b1;
@@ -23,6 +36,7 @@
   --kn-text-on-light: #000000;
   --kn-text-neon: #ccff00;
   --kn-text-disabled: #3e3e3e;
+  --kn-text-large-title: #ffffff;
   
   /* Fills */
   --kn-fill-neutral: #3a3b3d;
@@ -42,14 +56,15 @@
   --kn-font-size-xs: 0.75rem;     /* 12px - Caption */
   --kn-font-size-sm: 0.875rem;    /* 14px - Subheading/Button */
   --kn-font-size-base: 1rem;      /* 16px - Body */
-  --kn-font-size-lg: 1.25rem;     /* 20px - Heading */
-  --kn-font-size-xl: 1.5rem;      /* 24px - Subtitle */
+  --kn-font-size-lg: 1.125rem;    /* 18px - Subtitle */
+  --kn-font-size-xl: 1.25rem;     /* 20px - Heading */
   --kn-font-size-2xl: 2rem;       /* 32px - Large Title */
   --kn-font-size-3xl: 2.5rem;     /* 40px */
   --kn-font-size-4xl: 3rem;       /* 48px */
   --kn-font-size-5xl: 3.5rem;     /* 56px - XL Title */
   
   /* Font Weights - From design system */
+  --kn-font-weight-regular: 400;
   --kn-font-weight-medium: 500;
   --kn-font-weight-bold: 700;
   --kn-font-weight-black: 900;
@@ -57,13 +72,15 @@
   /* Line Heights - From design system */
   --kn-line-height-tight: 1;
   --kn-line-height-normal: 1.2;
+  --kn-line-height-body: 1.3;
   --kn-line-height-relaxed: 1.5;
   
-  /* Text Styles */
+  /* Text Styles - From Figma design system */
   --kn-text-xl-title: 900 3.5rem/1 var(--kn-font-heading);
   --kn-text-large-title: 900 2rem/1.2 var(--kn-font-heading);
-  --kn-text-subtitle: 700 1.5rem/1.5 var(--kn-font-heading);
-  --kn-text-heading: 900 1.25rem/1 var(--kn-font-heading);
+  --kn-text-subtitle: 400 1.125rem/1.5 var(--kn-font-heading);
+  --kn-text-heading: 400 1.25rem/1 var(--kn-font-heading);
+  --kn-text-heading-emphasised: 900 1.25rem/1 var(--kn-font-heading);
   --kn-text-body: 500 1rem/1.3 var(--kn-font-base);
   --kn-text-body-emphasised: 900 1rem/1.375 var(--kn-font-base);
   --kn-text-subheading: 500 0.875rem/1.2 var(--kn-font-base);
@@ -71,19 +88,28 @@
   --kn-text-button: 900 0.875rem/1.2 var(--kn-font-base);
   --kn-text-caption-emphasised: 700 0.75rem/1 var(--kn-font-base);
   
-  /* Letter Spacing */
+  /* Letter Spacing - From Figma design system */
   --kn-letter-spacing-tight: -0.5px;
   --kn-letter-spacing-normal: 0px;
+  --kn-letter-spacing-slight: 0.2px;
   --kn-letter-spacing-wide: 1px;
   
-  /* Spacing Scale */
-  --kn-spacing-zero: 0;
+  /* Spacing Scale - From Variable Collection */
+  --kn-spacing-zero: 0;         /* 0px - Zero */
   --kn-spacing-xs: 0.5rem;      /* 8px - Small */
   --kn-spacing-sm: 0.5rem;      /* 8px - Small */
   --kn-spacing-md: 1rem;        /* 16px - Medium */
   --kn-spacing-lg: 1.5rem;      /* 24px - Large */
   --kn-spacing-xl: 2rem;        /* 32px - XL */
   --kn-spacing-2xl: 2.5rem;     /* 40px - XXL */
+  
+  /* Numeric Variables */
+  --kn-number-small: 8;
+  --kn-number-medium: 16;
+  --kn-number-large: 24;
+  --kn-number-xl: 32;
+  --kn-number-xxl: 40;
+  --kn-number-zero: 0;
   
   /* Border Radius - Using medium spacing as base */
   --kn-radius-sm: 0.5rem;       /* 8px */
@@ -111,4 +137,44 @@
   --kn-shadow-glow-neon: 0 0 20px rgba(204, 255, 0, 0.4);
   --kn-shadow-glow-purple: 0 0 20px rgba(199, 183, 255, 0.4);
 }
+
+/* ===================================
+   TEXT STYLES REFERENCE
+   ===================================
+   
+   Usage: Apply text styles using the CSS variables above
+   
+   --kn-text-xl-title           → XL Title (56px/900)
+   --kn-text-large-title        → Large Title (32px/900)
+   --kn-text-subtitle           → Subtitle (18px/400)
+   --kn-text-heading            → Heading (20px/400)
+   --kn-text-heading-emphasised → Heading Emphasised (20px/900)
+   --kn-text-body               → Body (16px/500)
+   --kn-text-body-emphasised    → Body Emphasised (16px/900)
+   --kn-text-subheading         → Subheading (14px/500)
+   --kn-text-subheading-emphasised → Subheading Emphasised (14px/900)
+   --kn-text-button             → Button (14px/900/uppercase)
+   --kn-text-caption-emphasised → Caption Emphasised (12px/700)
+   
+   EFFECT STYLES REFERENCE
+   ===================================
+   
+   --kn-shadow-neon-tile        → Neon Tile (#9bc200)
+   --kn-shadow-purple-tile      → Purple Tile (#9070ff)
+   --kn-shadow-neutral-tile     → Neutral Tile (#1e1e1f)
+   --kn-shadow-teal-tile        → Teal Tile (#016b83)
+   --kn-shadow-disabled-tile    → Disabled Tile (#1f1f20)
+   --kn-shadow-primary-button   → Primary Button (#9bc200)
+   --kn-shadow-secondary-button → Secondary Button (#2e2f31)
+   
+   SPACING REFERENCE
+   ===================================
+   
+   --kn-number-zero    → 0px
+   --kn-number-small   → 8px
+   --kn-number-medium  → 16px
+   --kn-number-large   → 24px
+   --kn-number-xl      → 32px
+   --kn-number-xxl     → 40px
+*/
 
