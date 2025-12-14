@@ -30,8 +30,32 @@
   
   .btn-secondary {
     @apply bg-kn-bg-card text-kn-text-primary font-black rounded-full px-[18px] py-[16px];
-    @apply uppercase text-[14px] border border-white/10 transition-all duration-200 shadow-neutral-tile;
-    @apply hover:border-white/20 active:translate-y-[3px] active:shadow-none;
+    @apply uppercase text-[14px] transition-all duration-200;
+    @apply hover:bg-kn-bg-card active:translate-y-[3px];
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+    outline: none !important;
+    box-shadow: 0px 4px 0px #2E2F31 !important;
+  }
+  
+  .btn-secondary:active {
+    box-shadow: none !important;
+    border: none !important;
+    border-width: 0 !important;
+  }
+  
+  .btn-secondary:focus {
+    outline: none !important;
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
+  }
+  
+  .btn-secondary:hover {
+    border: none !important;
+    border-width: 0 !important;
+    border-color: transparent !important;
   }
   
   .btn-compact {

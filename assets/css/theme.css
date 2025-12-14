@@ -166,7 +166,7 @@ section {
 .how-it-works-showcase {
   @apply py-8 relative mx-auto;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
   position: relative;
 }
 
