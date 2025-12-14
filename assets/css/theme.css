@@ -40,7 +40,7 @@
 }
 
 .nav-link {
-  @apply text-kn-text-secondary font-medium py-5 px-6 transition-colors;
+  @apply text-kn-text-secondary font-medium py-4 px-6 transition-colors;
   font-size: 0.9375rem;
   letter-spacing: 0.2px;
 }
