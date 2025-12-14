@@ -1,5 +1,9 @@
 // Main JavaScript for Keepnet Marketing Site
 
+// Import CSS files
+import '../css/main.css';
+import '../css/theme.css';
+
 // Navbar scroll effect
 window.addEventListener('scroll', function() {
   const navbar = document.querySelector('.navbar');
