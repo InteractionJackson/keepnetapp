@@ -143,15 +143,16 @@ section {
 
 /* Feature cards */
 .feature-card-new {
-  @apply h-full p-8 bg-kn-bg-secondary rounded-xl;
+  @apply h-full rounded-xl;
+  padding: 0;
 }
 
 .feature-mockup {
-  @apply relative flex justify-center items-center p-4;
+  @apply relative flex justify-center items-center;
 }
 
 .feature-mockup img {
-  @apply w-full h-auto max-w-[280px];
+  @apply w-full h-auto;
 }
 
 .feature-title-new {
