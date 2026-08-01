@@ -4,15 +4,18 @@
 import '../css/main.css';
 import '../css/theme.css';
 
-// Navbar scroll effect
-window.addEventListener('scroll', function() {
+// Navbar reveal-on-scroll: hidden at the very top, slides in once scrolling
+function updateNavbarVisibility() {
   const navbar = document.querySelector('.navbar');
-  if (window.scrollY > 50) {
-    navbar.classList.add('scrolled');
+  if (!navbar) return;
+  if (window.scrollY > 80) {
+    navbar.classList.add('nav-visible');
   } else {
-    navbar.classList.remove('scrolled');
+    navbar.classList.remove('nav-visible');
   }
-});
+}
+window.addEventListener('scroll', updateNavbarVisibility, { passive: true });
+document.addEventListener('DOMContentLoaded', updateNavbarVisibility);
 
 // Mobile menu toggle
 const mobileMenuBtn = document.getElementById('mobile-menu-btn');
