@@ -1,5 +1,14 @@
 /* Keepnet Custom Theme - Tailwind Compatible */
 
+/* Section gradient panels (features + carousel) - Flowkit palette */
+:root {
+  --grad-pink: linear-gradient(180deg, #ff5c85 0%, #f43054 100%);
+  --grad-blue: linear-gradient(180deg, #29c7e8 0%, #2c6ff2 100%);
+  --grad-green: linear-gradient(160deg, #2fe07d 0%, #10bd5c 100%);
+  --grad-purple: linear-gradient(150deg, #ab4ff0 0%, #8a37d6 100%);
+  --grad-orange: linear-gradient(150deg, #ff9f33 0%, #f56616 100%);
+}
+
 /* Container */
 .container {
   max-width: min(1016px, 100vw);
@@ -40,9 +49,9 @@
 }
 
 .nav-link {
-  @apply text-kn-text-secondary font-medium py-4 px-6 transition-colors;
-  font-size: 0.9375rem;
-  letter-spacing: 0.2px;
+  @apply text-kn-text-secondary font-bold uppercase py-4 px-5 transition-colors;
+  font-size: 0.8125rem;
+  letter-spacing: 0.6px;
 }
 
 .nav-link:hover,
@@ -97,30 +106,39 @@
 /* Hero section */
 .hero-section {
   @apply bg-kn-bg-dark relative overflow-hidden;
-  padding: 200px 0 100px 0;
+  padding: 180px 0 120px 0;
 }
 
 .hero-section::before {
   content: '';
   @apply absolute top-0 left-1/2 -translate-x-1/2 w-full h-full pointer-events-none;
-  background: radial-gradient(circle at top center, rgba(204, 255, 0, 0.03) 0%, transparent 50%);
+  background: radial-gradient(circle at top center, rgba(204, 255, 0, 0.05) 0%, transparent 55%);
 }
 
-.hero-mockup {
-  @apply relative py-8;
+.hero-content {
+  @apply relative z-10 mx-auto text-center flex flex-col items-center;
+  max-width: 640px;
 }
 
-.hero-mockup img {
-  @apply max-w-full h-auto transition-transform;
+.hero-logo {
+  @apply mb-6;
+  width: 80px;
+  height: 80px;
 }
 
-/* Problem section */
-.problem-section {
-  @apply bg-transparent py-20;
+.hero-title {
+  @apply text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight;
+  line-height: 1.05;
 }
 
-.problem-text {
-  @apply text-xl lg:text-2xl leading-relaxed text-kn-text-secondary mb-6;
+.hero-subtitle {
+  @apply text-lg text-kn-text-secondary mt-5 mx-auto;
+  max-width: 600px;
+  line-height: 1.5;
+}
+
+.hero-caption {
+  @apply text-sm text-kn-text-muted mt-4;
 }
 
 /* Section styling */
@@ -141,33 +159,83 @@ section {
   @apply text-lg font-medium text-kn-text-secondary mb-12 leading-relaxed;
 }
 
-/* Feature cards */
-.feature-card-new {
-  @apply h-full rounded-xl;
-  padding: 0;
+/* Two-tone text: muted continuation of an emphasised statement */
+.text-muted-tone {
+  @apply text-kn-text-secondary;
 }
 
-.feature-mockup {
-  @apply relative flex justify-center items-center;
+/* Big centred statement blocks (features intro + differentiator) */
+.statement {
+  @apply text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-center mx-auto;
+  line-height: 1.15;
+  max-width: 900px;
 }
 
-.feature-mockup img {
-  @apply w-full h-auto;
+.statement .text-muted-tone {
+  @apply font-black;
 }
 
-.feature-title-new {
-  @apply text-xl font-black leading-snug text-kn-text-primary mb-4;
+/* Feature rows - alternating full-width layout */
+.feature-row {
+  @apply grid grid-cols-1 items-center gap-8 lg:gap-12;
 }
 
-.feature-description-new {
-  @apply text-base font-normal leading-relaxed text-kn-text-secondary mb-0 max-w-[350px] mx-auto;
+@screen lg {
+  .feature-row {
+    grid-template-columns: minmax(0, 460px) minmax(0, 1fr);
+  }
+
+  /* Reversed rows: text on the left, phone on the right */
+  .feature-row.feature-row-reverse .feature-visual {
+    order: 2;
+  }
+
+  .feature-row.feature-row-reverse .feature-copy {
+    order: 1;
+  }
+}
+
+.feature-visual {
+  @apply relative flex justify-center items-end;
+  min-height: 360px;
+}
+
+/* Coloured gradient panel that sits behind the device */
+.feature-panel {
+  @apply absolute rounded-2xl;
+  width: 320px;
+  height: 300px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--panel-gradient, var(--grad-pink));
+}
+
+.feature-phone {
+  @apply relative z-10 h-auto;
+  width: 240px;
+  max-width: 68%;
+  filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.45));
+}
+
+.feature-copy {
+  @apply max-w-[496px];
+}
+
+.feature-text {
+  @apply text-xl lg:text-2xl leading-relaxed text-kn-text-secondary;
+}
+
+.feature-text strong {
+  @apply text-kn-text-primary font-black;
 }
 
 /* Carousel */
 .how-it-works-showcase {
-  @apply py-8 relative mx-auto;
+  @apply relative mx-auto;
   width: 100%;
-  overflow: visible;
+  overflow: hidden;
+  border-radius: 24px;
   position: relative;
 }
 
@@ -179,19 +247,25 @@ section {
 }
 
 .carousel-slide {
-  @apply flex-shrink-0 bg-kn-bg-secondary rounded-xl px-8 flex flex-col;
+  @apply flex-shrink-0 rounded-2xl px-6 sm:px-10 flex flex-col overflow-hidden;
   width: 100%;
   flex: 0 0 100%;
   padding-top: 2rem;
   padding-bottom: 0px !important;
+  background: var(--slide-gradient, var(--grad-purple));
 }
 
+/* Slide colour variants */
+.carousel-slide.slide-purple { background: var(--grad-purple); }
+.carousel-slide.slide-orange { background: var(--grad-orange); }
+.carousel-slide.slide-green  { background: var(--grad-green); }
+
 .slide-content-wrapper {
-  @apply flex flex-col h-full min-h-[500px];
+  @apply flex flex-col h-full min-h-[520px];
 }
 
 .slide-text-row {
-  @apply text-left pb-8;
+  @apply text-left pb-6;
 }
 
 .slide-image-row {
@@ -203,17 +277,21 @@ section {
 }
 
 .showcase-mockup img {
-  @apply w-full h-auto max-w-[350px] rounded-2xl transition-transform;
+  @apply w-full h-auto max-w-[300px] transition-transform;
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
 }
 
 .showcase-title {
-  @apply text-lg font-medium mb-4 text-kn-text-primary leading-normal;
-  letter-spacing: 0.2px;
+  @apply text-xl lg:text-2xl font-black mb-0 text-white leading-snug max-w-[640px];
+}
+
+.showcase-title .text-muted-tone {
+  color: rgba(255, 255, 255, 0.72);
+  @apply font-black;
 }
 
 .showcase-description {
-  @apply text-lg font-normal text-kn-text-secondary max-w-[600px] mb-0 leading-relaxed;
-  letter-spacing: 0.2px;
+  @apply sr-only;
 }
 
 .carousel-nav {
@@ -240,7 +318,7 @@ section {
 }
 
 .carousel-dots {
-  @apply flex justify-center gap-3 mt-4 p-4 relative z-10;
+  @apply hidden;
 }
 
 .carousel-dot {

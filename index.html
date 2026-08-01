@@ -6,34 +6,40 @@
   <meta name="description" content="Keepnet - The friendly UK match fishing app that helps anglers log their matches, track weights, and record which baits and methods worked best.">
   <meta name="keywords" content="match fishing, UK fishing app, fishing log, keepnet tracker, fishing records, angling app">
   <meta name="author" content="Keepnet">
-  
+
   <!-- Open Graph / Facebook -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://keepnetapp.com/">
   <meta property="og:title" content="Keepnet - Track every bite. Master your matches.">
   <meta property="og:description" content="The simple, friendly app for UK match anglers. Log your catches live, track what works, and improve your game — one match at a time.">
   <meta property="og:image" content="/assets/images/og-image.jpg">
-  
+
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://keepnetapp.com/">
   <meta property="twitter:title" content="Keepnet - Track every bite. Master your matches.">
   <meta property="twitter:description" content="The simple, friendly app for UK match anglers. Log your catches live, track what works, and improve your game — one match at a time.">
   <meta property="twitter:image" content="/assets/images/og-image.jpg">
-  
+
   <title>Keepnet - Track every bite. Master your matches.</title>
-  
+
   <!-- Favicon -->
   <link rel="icon" type="image/x-icon" href="/assets/images/favicon.ico">
-  
+
 </head>
 <body>
+
+  <!--
+    TestFlight link: replace the placeholder URL below (and the matching ones
+    further down) with the real public TestFlight invite once available.
+    Marked with data-testflight for easy find/replace.
+  -->
 
   <!-- Navigation -->
   <nav class="navbar">
     <div class="container mx-auto px-4 flex items-center justify-between">
       <a class="navbar-brand" href="#home">
-        <img src="/assets/images/logo.svg" alt="Keepnet Logo" height="28" class="logo-icon">
+        <img src="/assets/images/logo.svg" alt="Keepnet" height="28" class="logo-icon">
       </a>
       <button class="navbar-toggler lg:hidden" type="button" aria-label="Toggle navigation" id="mobile-menu-btn">
         <span class="navbar-toggler-icon"></span>
@@ -49,8 +55,11 @@
           <li class="nav-item">
             <a class="nav-link" href="#faq">FAQ</a>
           </li>
-          <li class="nav-item lg:ml-2">
-            <a class="btn-primary btn-compact" href="#beta">Get early access</a>
+          <li class="nav-item lg:ml-3">
+            <a class="btn-primary btn-compact" href="https://testflight.apple.com/join/PLACEHOLDER" data-testflight target="_blank" rel="noopener">
+              <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+              <span>Join iOS TestFlight</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -60,95 +69,103 @@
   <!-- Hero Section -->
   <section id="home" class="hero-section">
     <div class="container mx-auto px-4">
-      <div class="w-full">
-        <h1 class="text-5xl lg:text-6xl font-black mb-4">Fish smarter matches.<br>One catch at a time.</h1>
-        <p class="text-lg lg:text-xl text-kn-text-secondary mb-8 max-w-[600px]">Keepnet is a match-fishing companion that helps you track what’s happening as you fish, then turn it into insights you can use next time. <br> <br>Not just a logbook. A better way to learn from every match.</p>
-        <div class="flex flex-col sm:flex-row gap-3 mb-5">
-          <a href="#beta" class="btn-primary btn-lg">Get early access</a>
-          <a href="#how-it-works" class="btn-secondary btn-lg">How it works</a>
+      <div class="hero-content">
+        <img src="/assets/images/logo-icon.svg" alt="Keepnet logo" class="hero-logo" width="80" height="80">
+        <h1 class="hero-title">Track every bite.<br>Master your matches.</h1>
+        <p class="hero-subtitle">The simple, friendly app for UK match anglers. Log your catches live, track what works, and improve your game, one match at a time.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3 mt-8">
+          <a href="https://testflight.apple.com/join/PLACEHOLDER" data-testflight target="_blank" rel="noopener" class="btn-primary">
+            <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span>Join iOS TestFlight</span>
+          </a>
+          <span class="btn-secondary btn-disabled" role="button" aria-disabled="true">
+            <svg class="btn-icon" viewBox="0 0 576 512" fill="currentColor" aria-hidden="true"><path d="M420.55 301.93a24 24 0 1 1 24-24 24 24 0 0 1-24 24m-265.1 0a24 24 0 1 1 24-24 24 24 0 0 1-24 24m273.7-144.48 47.94-83a10 10 0 1 0-17.27-10l-48.54 84.07a301.25 301.25 0 0 0-246.56 0L116.18 64.45a10 10 0 1 0-17.27 10l47.94 83C64.53 202.22 8.24 285.55 0 384h576c-8.24-98.45-64.54-181.78-146.85-226.55"/></svg>
+            <span>Android coming soon</span>
+          </span>
         </div>
-      </div>
-      
-      <!-- Integrated Mockups -->
-      <div class="mt-12 lg:mt-20">
-        <div class="hero-mockup text-center">
-          <img src="/assets/images/mockups/lineup.png" alt="Keepnet app screenshots" class="max-w-full h-auto max-h-[600px] object-contain mx-auto">
-        </div>
+        <p class="hero-caption">Free while in Beta</p>
       </div>
     </div>
   </section>
 
-  <!-- Problem/Solution Statement -->
-  <section id="problem-solution" class="problem-section">
+  <!-- Features intro -->
+  <section class="py-20">
     <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center">
-        <p class="problem-text">Keepnet works like a digital clicker — quick to use mid-match, designed around how competitions actually unfold.</p>
-        <p class="problem-text">You focus on fishing. Keepnet quietly keeps track of your progress.</p>
-      </div>
+      <h2 class="statement">Everything you need to up your game. <span class="text-muted-tone">Powerful features designed specifically for match anglers</span></h2>
     </div>
   </section>
 
   <!-- Key Features -->
-  <section id="features" class="py-20">
-    <div class="container mx-auto px-4">
-      <div class="max-w-4xl mx-auto text-center mb-2">
-        <h2 class="section-title mb-2">Everything you need to up your game</h2>
-        <p class="section-subtitle">Powerful features designed specifically for match anglers</p>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 justify-center">
-        <div class="feature-card-new">
-          <div class="feature-mockup">
-            <img src="/assets/images/add-to-net.png" alt="Add fish as you catch them">
-          </div>
-          <div class ="px-4 py-4">
-            <h3 class="feature-title-new mb-3">Log catches as they happen</h3>
-            <p class="feature-description-new">Whether you’re tracking numbers, weight, or both, Keepnet keeps it fast, so you don’t miss the next bite.</p><br><p>Designed for poles, commercials, and tight match situations.</p>
-          </div>
+  <section id="features" class="pb-20">
+    <div class="container mx-auto px-4 flex flex-col gap-16 lg:gap-24">
+
+      <!-- Feature 1: Keepnets -->
+      <div class="feature-row">
+        <div class="feature-visual">
+          <div class="feature-panel" style="--panel-gradient: var(--grad-pink);"></div>
+          <img src="/assets/images/mockups/during-match.png" alt="Live keepnet weights during a match" class="feature-phone">
         </div>
-        <div class="feature-card-new ">
-          <div class="feature-mockup">
-            <img src="/assets/images/timeline-1.png" alt="Remember every session">
-          </div>
-          <div class ="px-4 py-4">
-            <h3 class="feature-title-new mb-3">See what was working, and when</h3>
-            <p class="feature-description-new">After the match, Keepnet turns your taps into insights: Where most of your weight was built. How different sessions compare over time.</p><br><p>The more you fish, the smarter your insights get.</p>
-          </div>
-        </div>
-        <div class="feature-card-new">
-          <div class="feature-mockup">
-            <img src="/assets/images/trends.png" alt="What actually works?">
-          </div>
-          <div class ="px-4 py-4">
-            <h3 class="feature-title-new mb-3">Spot trends across matches</h3>
-            <p class="feature-description-new">Was your best spell always late morning? Do certain venues fade after two hours? Are quick starts actually winning you points?</p><br><p>Keepnet helps you spot patterns across sessions, not just remember the last one.</p>
-          </div>
+        <div class="feature-copy">
+          <p class="feature-text"><strong>Stay in control of your keepnets.</strong> See exactly where you stand at any moment. Log fish as you catch them and know if you’re building a match-winning net, without taking your focus off the water.</p>
         </div>
       </div>
+
+      <!-- Feature 2: Playbook -->
+      <div class="feature-row feature-row-reverse">
+        <div class="feature-visual">
+          <div class="feature-panel" style="--panel-gradient: var(--grad-blue);"></div>
+          <img src="/assets/images/mockups/dashboard.png" alt="Your match history and personal bests" class="feature-phone">
+        </div>
+        <div class="feature-copy">
+          <p class="feature-text"><strong>Build your own match playbook.</strong> Every session you fish becomes a reference point. Track venues, pegs and weights so you can turn past matches into smarter decisions next time.</p>
+        </div>
+      </div>
+
+      <!-- Feature 3: Patterns -->
+      <div class="feature-row">
+        <div class="feature-visual">
+          <div class="feature-panel" style="--panel-gradient: var(--grad-green);"></div>
+          <img src="/assets/images/mockups/after-match.png" alt="Match breakdown and weight-over-time graph" class="feature-phone">
+        </div>
+        <div class="feature-copy">
+          <p class="feature-text"><strong>Spot what actually wins matches.</strong> See clear patterns in your results. Which baits, tactics and approaches deliver when it counts. Less guesswork. More repeatable success.</p>
+        </div>
+      </div>
+
     </div>
   </section>
 
-  <!-- How It Works -->
+  <!-- Statement -->
+  <section class="problem-section">
+    <div class="container mx-auto px-4">
+      <p class="statement">We know how frustrating it is trying to remember what worked three matches ago. <span class="text-muted-tone">Keepnet makes it effortless to track every detail and spot the patterns that help you win.</span></p>
+    </div>
+  </section>
+
+  <!-- How It Works / Carousel -->
   <section id="how-it-works" class="section-alt py-20">
     <div class="container mx-auto px-4">
-      <div class="w-full mb-2 text-left relative">
-        <h2 class="section-title">Simple to use, powerful results</h2>
+      <div class="w-full mb-8 relative">
+        <h2 class="section-title mb-0">Simple to use. <span class="text-muted-tone">Powerful results.</span></h2>
         <div class="carousel-nav">
+          <button class="carousel-arrow carousel-prev" aria-label="Previous slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"></polyline></svg>
+          </button>
+          <button class="carousel-arrow carousel-next" aria-label="Next slide">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+          </button>
         </div>
       </div>
-      
+
       <!-- Carousel Container -->
-      <div class="how-it-works-showcase" style="overflow: visible;">
-        <div class="carousel-track gap-2">
+      <div class="how-it-works-showcase">
+        <div class="carousel-track">
           <!-- Slide 1: Before Match -->
-          <div class="carousel-slide pb-0">
+          <div class="carousel-slide slide-purple">
             <div class="slide-content-wrapper">
-              <!-- Row 1: Title and Subtitle -->
               <div class="slide-text-row">
-                <h3 class="showcase-title">Start every match on the front foot</h3>
-                <p class="showcase-description">Get everything set up in seconds so you are thinking about the water, not admin. Capture the key details now and give yourself proper context when you look back later.</p>
+                <h3 class="showcase-title">Start every match on the front foot. <span class="text-muted-tone">Get everything set up in seconds so you are thinking about the water, not admin.</span></h3>
               </div>
-              
-              <!-- Row 2: Image -->
               <div class="slide-image-row">
                 <div class="showcase-mockup">
                   <img src="/assets/images/mockups/before-match.png" alt="Set up your match">
@@ -158,15 +175,11 @@
           </div>
 
           <!-- Slide 2: During Match -->
-          <div class="carousel-slide pb-0">
+          <div class="carousel-slide slide-orange">
             <div class="slide-content-wrapper">
-              <!-- Row 1: Title and Subtitle -->
               <div class="slide-text-row">
-                <h3 class="showcase-title">Know where you stand, all match long</h3>
-                <p class="showcase-description">See your weight build in real time as you catch fish. You will always know if you need to push, settle, or protect what you have without losing focus.</p>
+                <h3 class="showcase-title">Know where you stand, all match long. <span class="text-muted-tone">See your weight build in real time as you catch fish. You will always know if you need to push, settle, or protect what you have without losing focus.</span></h3>
               </div>
-              
-              <!-- Row 2: Image -->
               <div class="slide-image-row">
                 <div class="showcase-mockup">
                   <img src="/assets/images/mockups/during-match.png" alt="Log catches during your match">
@@ -176,15 +189,11 @@
           </div>
 
           <!-- Slide 3: After Match -->
-          <div class="carousel-slide pb-0">
+          <div class="carousel-slide slide-green">
             <div class="slide-content-wrapper">
-              <!-- Row 1: Title and Subtitle -->
               <div class="slide-text-row">
-                <h3 class="showcase-title">Turn every result into an advantage</h3>
-                <p class="showcase-description">Look back with clarity. See what worked, what did not, and how the match unfolded so next time you are fishing with experience on your side.</p>
+                <h3 class="showcase-title">Turn every result into an advantage. <span class="text-muted-tone">Look back with clarity. See what worked, what did not, and how the match unfolded so next time you are fishing with experience on your side.</span></h3>
               </div>
-              
-              <!-- Row 2: Image -->
               <div class="slide-image-row">
                 <div class="showcase-mockup">
                   <img src="/assets/images/mockups/after-match.png" alt="Review and learn from your matches">
@@ -204,42 +213,42 @@
     </div>
   </section>
 
-<!-- differentiator statement -->
-<section id="problem-solution" class="problem-section">
-  <div class="container mx-auto px-4">
-    <div class="max-w-4xl mx-auto text-center">
-      <h2 class="section-title mb-2">Not just another fishing log</h2>
-      <p class="problem-text">If you want somewhere to store memories, photos, and stories — there are plenty of great apps for that.</p>
-      <p class="problem-text">If you want to:</p>
-      <ul class="list-none text-xl lg:text-2xl leading-relaxed text-kn-text-secondary space-y-2 my-4 mb-6">
-        <li>• Fish more consistent matches</li>
-        <li>• Learn from your results</li>
-        <li>• Improve decision-making on the bank</li>
-      </ul>
-      <p class="problem-text" style="margin-top: 1.5rem;">Keepnet's for you.</p>
+  <!-- Differentiator statement -->
+  <section id="differentiator" class="problem-section">
+    <div class="container mx-auto px-4">
+      <div class="max-w-3xl mx-auto text-center">
+        <h2 class="section-title mb-4">Not just another fishing log</h2>
+        <p class="text-xl text-kn-text-secondary leading-relaxed mb-4">If you want somewhere to store memories, photos, and stories — there are plenty of great apps for that.</p>
+        <p class="text-xl text-kn-text-secondary leading-relaxed mb-4">If you want to:</p>
+        <ul class="list-none text-xl leading-relaxed text-kn-text-secondary space-y-2 mb-6">
+          <li>Fish more consistent matches</li>
+          <li>Learn from your results</li>
+          <li>Improve decision-making on the bank</li>
+        </ul>
+        <p class="text-2xl font-black text-kn-text-primary">Keepnet’s for you.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Beta Program -->
   <section id="beta" class="beta-section section-alt">
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto">
         <div class="beta-form-card">
-          <div class="text-center mb-4">
+          <div class="text-center mb-6">
             <h2 class="section-title mb-3">Register for early access</h2>
             <p class="text-kn-text-secondary">We're still building at the moment, but we're looking for UK match anglers to beta test Keepnet before it launches. Get early access, share your feedback, and influence what we build next.</p>
           </div>
-          
-          <div class="mb-4">
-            <h4 class="text-lg font-semibold mb-3">What you get:</h4>
+
+          <div class="mb-6">
+            <h4 class="text-lg font-black mb-3">What you get:</h4>
             <ul class="list-none text-kn-text-secondary space-y-2">
               <li>✓ Free access during beta (and beyond)</li>
               <li>✓ Direct line to the development team</li>
               <li>✓ Your feedback shapes the app</li>
             </ul>
           </div>
-          
+
           <div class="substack-embed-wrapper">
             <iframe src="https://keepnet.substack.com/embed" width="100%" height="320" frameborder="0" scrolling="no"></iframe>
           </div>
@@ -253,7 +262,7 @@
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="section-title mb-3">Always affordable</h2>
-        <p class="text-kn-text-secondary text-xl">Keepnet is free while we're in beta. When we launch, pricing will be fair and transparent, we're anglers too, and we believe good tools shouldn't break the bank.</p>
+        <p class="text-kn-text-secondary text-xl leading-relaxed">Keepnet is free while we're in beta. When we launch, pricing will be fair and transparent, we're anglers too, and we believe good tools shouldn't break the bank.</p>
       </div>
     </div>
   </section>
@@ -267,7 +276,7 @@
       </div>
       <div class="max-w-3xl mx-auto">
         <div class="accordion" id="faqAccordion">
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button" type="button" data-target="#faq1" aria-expanded="true" aria-controls="faq1">
@@ -276,11 +285,11 @@
               </h3>
               <div id="faq1" class="accordion-collapse show">
                 <div class="accordion-body">
-                  Keepnet is available for both iOS (iPhone) and Android phones. We're starting with mobile because that's what you have waterside.
+                  Keepnet is starting on iOS (iPhone) via TestFlight, with Android coming soon. We're launching on mobile first because that's what you have waterside.
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-target="#faq2" aria-expanded="false" aria-controls="faq2">
@@ -293,7 +302,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-target="#faq3" aria-expanded="false" aria-controls="faq3">
@@ -306,7 +315,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-target="#faq4" aria-expanded="false" aria-controls="faq4">
@@ -319,7 +328,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-target="#faq5" aria-expanded="false" aria-controls="faq5">
@@ -332,7 +341,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-target="#faq6" aria-expanded="false" aria-controls="faq6">
@@ -345,7 +354,7 @@
                 </div>
               </div>
             </div>
-            
+
             <div class="accordion-item">
               <h3 class="accordion-header">
                 <button class="accordion-button collapsed" type="button" data-target="#faq7" aria-expanded="false" aria-controls="faq7">
@@ -358,7 +367,7 @@
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -370,8 +379,14 @@
     <div class="container mx-auto px-4">
       <div class="max-w-3xl mx-auto text-center">
         <h2 class="section-title mb-3">Ready to level up your match fishing?</h2>
-        <p class="text-kn-text-secondary text-xl mb-4">Join the beta and start tracking your way to better results</p>
-        <a href="#beta" class="btn-primary btn-lg">Join the Beta Today</a>
+        <p class="text-kn-text-secondary text-xl mb-6">Join the iOS TestFlight beta and start tracking your way to better results.</p>
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+          <a href="https://testflight.apple.com/join/PLACEHOLDER" data-testflight target="_blank" rel="noopener" class="btn-primary">
+            <svg class="btn-icon" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zM262.1 104.5c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>
+            <span>Join iOS TestFlight</span>
+          </a>
+          <a href="#beta" class="btn-secondary">Register for updates</a>
+        </div>
       </div>
     </div>
   </section>
@@ -407,7 +422,7 @@
         </div>
       </div>
       <div class="footer-copyright">
-        <p class="m-0">&copy; 2025 Keepnet. Made for UK match anglers.</p>
+        <p class="m-0">&copy; 2026 Keepnet. Made for UK match anglers.</p>
       </div>
     </div>
   </footer>
@@ -417,5 +432,3 @@
 
 </body>
 </html>
-
-

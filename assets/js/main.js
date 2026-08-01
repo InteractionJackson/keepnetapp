@@ -117,19 +117,17 @@ function initCarousel() {
   
   function goToSlide(index) {
     if (index < 0 || index >= totalSlides) return;
-    
-    // Calculate offset - each slide is 100% of container width
-    const container = track.parentElement;
-    const containerWidth = container.offsetWidth;
-    const offset = index * containerWidth;
-    
-    // Move the track
-    track.style.transform = `translateX(-${offset}px)`;
-    
-    // Update dots
-    dots.forEach(dot => dot.classList.remove('active'));
-    dots[index].classList.add('active');
-    
+
+    // Each slide is 100% of the track width — move by whole percentages
+    // so it stays exact at any viewport size.
+    track.style.transform = `translateX(-${index * 100}%)`;
+
+    // Update dots (optional — may be hidden)
+    if (dots.length) {
+      dots.forEach(dot => dot.classList.remove('active'));
+      if (dots[index]) dots[index].classList.add('active');
+    }
+
     currentSlide = index;
     updateButtons();
   }
