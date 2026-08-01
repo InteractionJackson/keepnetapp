@@ -27,13 +27,15 @@
 @layer components {
   /* Button styles */
   .btn-primary {
-    @apply bg-kn-primary-neon text-kn-text-on-light font-black rounded-full px-[12px] py-[16px];
+    @apply inline-flex items-center justify-center gap-2 no-underline;
+    @apply bg-kn-primary-neon text-kn-text-on-light font-black rounded-full px-[24px] py-[13px];
     @apply uppercase text-[14px] transition-all duration-200 shadow-neon-tile;
     @apply hover:bg-kn-primary-muted active:translate-y-[3px] active:shadow-none;
   }
-  
+
   .btn-secondary {
-    @apply bg-kn-bg-card text-kn-text-primary font-black rounded-full px-[18px] py-[16px];
+    @apply inline-flex items-center justify-center gap-2 no-underline;
+    @apply bg-kn-bg-card text-kn-text-primary font-black rounded-full px-[24px] py-[13px];
     @apply uppercase text-[14px] transition-all duration-200;
     @apply hover:bg-kn-bg-card active:translate-y-[3px];
     border: none !important;
@@ -41,6 +43,20 @@
     border-color: transparent !important;
     outline: none !important;
     box-shadow: 0px 4px 0px #2E2F31 !important;
+  }
+
+  /* Disabled "coming soon" button */
+  .btn-disabled {
+    @apply text-kn-text-muted cursor-not-allowed pointer-events-none;
+    background: #212123 !important;
+    box-shadow: 0px 4px 0px #1b1b1c !important;
+  }
+
+  /* Icon inside a store button */
+  .btn-icon {
+    @apply inline-block shrink-0;
+    width: 16px;
+    height: 16px;
   }
   
   .btn-secondary:active {

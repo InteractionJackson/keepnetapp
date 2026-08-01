@@ -136,6 +136,13 @@
   /* Neon glow effect */
   --kn-shadow-glow-neon: 0 0 20px rgba(204, 255, 0, 0.4);
   --kn-shadow-glow-purple: 0 0 20px rgba(199, 183, 255, 0.4);
+
+  /* Section gradient panels (features + carousel) - Flowkit palette */
+  --grad-pink: linear-gradient(180deg, #ff5c85 0%, #f43054 100%);
+  --grad-blue: linear-gradient(180deg, #29c7e8 0%, #2c6ff2 100%);
+  --grad-green: linear-gradient(160deg, #2fe07d 0%, #10bd5c 100%);
+  --grad-purple: linear-gradient(150deg, #ab4ff0 0%, #8a37d6 100%);
+  --grad-orange: linear-gradient(150deg, #ff9f33 0%, #f56616 100%);
 }
 
 /* ===================================
