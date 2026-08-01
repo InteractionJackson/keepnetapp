@@ -2,6 +2,9 @@
 
 /* Section gradient panels (features + carousel) - Flowkit palette */
 :root {
+  /* Two-tone title: primary is solid white, secondary a slightly transparent white */
+  --kn-title-secondary: rgba(255, 255, 255, 0.55);
+
   --grad-pink: linear-gradient(180deg, #ff5c85 0%, #f43054 100%);
   --grad-blue: linear-gradient(180deg, #29c7e8 0%, #2c6ff2 100%);
   --grad-green: linear-gradient(160deg, #2fe07d 0%, #10bd5c 100%);
@@ -15,20 +18,24 @@
   width: 100%;
 }
 
-/* Navbar */
+/* Navbar - hidden at the top of the page, reveals on scroll */
 .navbar {
   @apply fixed top-0 left-0 right-0 z-50;
-  background: rgba(26, 26, 27, 0.8);
+  background: rgba(26, 26, 27, 0.95);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: transform 0.35s ease, opacity 0.35s ease;
   min-height: 64px;
+  transform: translateY(-100%);
+  opacity: 0;
+  pointer-events: none;
 }
 
-.navbar.scrolled {
-  background: rgba(26, 26, 27, 0.95);
-  border-bottom-color: rgba(255, 255, 255, 0.1);
+.navbar.nav-visible {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
@@ -127,8 +134,9 @@
 }
 
 .hero-title {
-  @apply text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight;
-  line-height: 1.05;
+  @apply text-4xl sm:text-5xl lg:text-6xl font-black;
+  line-height: 100%;
+  letter-spacing: -3px;
 }
 
 .hero-subtitle {
@@ -161,13 +169,14 @@ section {
 
 /* Two-tone text: muted continuation of an emphasised statement */
 .text-muted-tone {
-  @apply text-kn-text-secondary;
+  color: var(--kn-title-secondary);
 }
 
 /* Big centred statement blocks (features intro + differentiator) */
 .statement {
-  @apply text-3xl sm:text-4xl lg:text-5xl font-black tracking-tight text-center mx-auto;
-  line-height: 1.15;
+  @apply text-3xl sm:text-4xl lg:text-5xl font-black text-center mx-auto;
+  line-height: 100%;
+  letter-spacing: -3px;
   max-width: 900px;
 }
 
@@ -195,26 +204,34 @@ section {
   }
 }
 
+/* Aspect-locked stage that clips the phone so it bleeds off the panel bottom
+   (reproduces Figma node 833:40647). All three rows share these dimensions;
+   only --panel-gradient changes. */
 .feature-visual {
-  @apply relative flex justify-center items-end;
-  min-height: 360px;
+  @apply relative mx-auto;
+  width: 100%;
+  max-width: 380px;
+  aspect-ratio: 360 / 460;
+  overflow: hidden;
 }
 
 /* Coloured gradient panel that sits behind the device */
 .feature-panel {
-  @apply absolute rounded-2xl;
-  width: 320px;
-  height: 300px;
+  @apply absolute;
+  left: 0;
+  right: 0;
   bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+  height: 74%;
+  border-radius: 40px;
   background: var(--panel-gradient, var(--grad-pink));
 }
 
 .feature-phone {
-  @apply relative z-10 h-auto;
-  width: 240px;
-  max-width: 68%;
+  @apply absolute z-10 h-auto;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
   filter: drop-shadow(0 24px 48px rgba(0, 0, 0, 0.45));
 }
 
@@ -282,7 +299,9 @@ section {
 }
 
 .showcase-title {
-  @apply text-xl lg:text-2xl font-black mb-0 text-white leading-snug max-w-[640px];
+  @apply text-xl lg:text-2xl font-black mb-0 text-white max-w-[640px];
+  line-height: 1.1;
+  letter-spacing: -1px;
 }
 
 .showcase-title .text-muted-tone {
@@ -504,7 +523,13 @@ section {
   .hero-section h1 {
     @apply text-4xl;
   }
-  
+
+  /* Relax the tight display tracking so small titles don't cramp */
+  .hero-title,
+  .statement {
+    letter-spacing: -1.5px;
+  }
+
   .section-title {
     @apply text-3xl;
   }
